@@ -5,4 +5,4 @@ A server runs continuously on the Raspberry Pi and checks the temperature and li
 
 An android application is developed which complements this system by providing the users to specify additional preferences and view the current readings/log pertaining to the sensor data.
 A server runs in the background on the Android application that continuously listens for any notifications from the server on the Pi as to changes in sensor data over the threshold.
-The code for the clienr-side (Android application) is in the SmartBlinds folder whereas that for the server-side is in the PervasiveComputing folder.
+The code for the clienr-side (Android application) is in the SmartBlinds folder whereas that for the server-side is in the Pervasive Computing folder.
