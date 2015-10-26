@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Preferences">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/setPrefLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Preferences"
+                android:id="@+id/prefHeading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="How should the blinds operate?"
+                android:id="@+id/prefContent"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/addRulesLayout">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                        <!--android:text=""-->
+                        <!--android:id="@+id/tempLabel"-->
+                        <!--/>-->
+
+                    <Spinner
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/temperatureSpin"
+                        android:layout_below="@+id/tempLabel"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <Spinner
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/conjunctionSpin"
+                        android:layout_gravity="center_vertical" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                        <!--android:text="Ambient"-->
+                        <!--android:id="@+id/ambientLabel"-->
+                        <!--/>-->
+
+                    <Spinner
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ambientSpin"
+                        android:layout_below="@+id/ambientLabel"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal"
+            android:longClickable="false"
+            android:clickable="false">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:id="@+id/arrowView"-->
+                    <!--android:src="@drawable/arrow_right"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_gravity="center_horizontal"/>-->
+
+            <Spinner
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultSpin"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Blinds"
+                android:id="@+id/conjunctLabel"
+                />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/myFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/enter"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="@android:color/transparent"
+                app:backgroundTint="#1E2D64"
+                app:elevation="4dp"
+                app:fabSize="mini"
+                android:clickable="true"
+                android:longClickable="true"
+                android:onClick="onAddRule" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cardList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="right">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deletetv"
+                android:clickable="true"
+                android:src="@drawable/delete"
+                android:enabled="true"
+                android:longClickable="true"
+                android:onClick="ondeleteRule" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">Smart Blinds</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Smart Blinds</string>
+
+    <string-array name="result_array">
+        <item>close</item>
+        <item>open</item>
+        <item>half</item>
+    </string-array>
+
+    <string-array name="condition_array">
+        <item>and</item>
+        <item>or</item>
+    </string-array>
+
+    <string-array name="ambient_array">
+        <item>dim</item>
+        <item>bright</item>
+        <item>dark</item>
+    </string-array>
+
+
+    <string-array name="temp_array">
+        <item>hot</item>
+        <item>cold</item>
+        <item>freezing</item>
+        <item>comfort</item>
+        <item>warm</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_history">History</string>
+
+</resources>
